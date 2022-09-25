@@ -2,17 +2,15 @@ import React from 'react'
 import {Card, Button} from 'react-bootstrap'
 import "bootstrap/dist/css/bootstrap.min.css"
 
-const Newscard = (props) => {
+const Newscard = ({src, title, onClick}) => {
   return (
-    <div>
-    <Card style={{ width: '18rem' }}>
-    <Card.Img variant="top" src={props.src} />
+    <div className="col pt-4">
+    <Card style={{ width: '18rem' }} onClick={onClick}>
+    <Card.Img variant="top" src={src} style={{ height: '15rem' }}/>
     <Card.Body>
-      {/* <Card.Title>Card Title</Card.Title> */}
       <Card.Text>
-        {props.title}
+        {title}
       </Card.Text>
-      <Button variant="primary">Detail</Button>
     </Card.Body>
   </Card>
   </div>
