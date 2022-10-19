@@ -9,7 +9,7 @@ function DetailNews() {
       <NavbarComp/>
       <main className='row d-flex'>
         <div className='col'>
-          <img src={router.query.imageUrl}/>
+          <img src={router.query.imageUrl} className="img-fluid"/>
         </div>
         <div className='col'>
           <p>{router.query.title}</p>
